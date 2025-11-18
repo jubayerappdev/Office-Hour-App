@@ -40,6 +40,6 @@ abstract class AppTheme {
   AppColors get colors;
   TextTheme get textTheme;
   ThemeData get theme;
-  FilledButtonTheme get filledButthontheme;
+  FilledButtonTheme get filledButtonTheme;
   OutlinedButtonTheme get outlinedButtonTheme;
 }

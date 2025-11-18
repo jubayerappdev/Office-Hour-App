@@ -13,7 +13,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: LightTheme().theme,
-      home: const Scaffold(body: Center(child: Text('Hello, Flutter!'))),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Counter"),
+          centerTitle: true,
+        ),
+        body: const Center(
+          child: Text("Hello Flutter!"),
+        ),
+      ),
     );
   }
 }

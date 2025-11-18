@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app_1/style/text_style.dart';
 import 'package:my_flutter_app_1/theme/app_theme.dart';
 
 class LightTheme extends AppTheme {
@@ -6,7 +7,23 @@ class LightTheme extends AppTheme {
   AppColors get colors => LightColors();
 
   @override
-  TextTheme get textTheme => TextTheme();
+  TextTheme get textTheme => TextTheme(
+   headlineLarge: TextStyles.headlineLarge,
+   headlineMedium: TextStyles.headlineMedium,
+   headlineSmall: TextStyles.headlineSmall,
+    displayLarge: TextStyles.displayLarge,
+    displayMedium: TextStyles.displayMedium,
+    displaySmall:TextStyles.displaySmall,
+    titleLarge:TextStyles.titleLarge,
+    titleMedium:TextStyles.titleMedium,
+    titleSmall:TextStyles.titleSmall,
+    labelLarge:TextStyles.labelLarge,
+    labelMedium:TextStyles.labelMedium,
+    labelSmall:TextStyles.labelSmall,
+    bodyLarge:TextStyles.bodyLarge,
+    bodyMedium:TextStyles.bodyMedium,
+    bodySmall:TextStyles.bodySmall,
+  );
 
   @override
   ThemeData get theme => ThemeData(
@@ -14,15 +31,11 @@ class LightTheme extends AppTheme {
     appBarTheme: AppBarTheme(
       backgroundColor: colors.background,
       foregroundColor: colors.surface900,
-      titleTextStyle: TextStyle(
-        color: colors.surface900,
-        fontSize: 20,
-        fontWeight: FontWeight.w600,
-      ),
+      titleTextStyle: TextStyles.labelMedium,
     ),
   );
   @override
-  FilledButtonTheme get filledButthontheme => throw UnimplementedError();
+  FilledButtonTheme get filledButtonTheme => throw UnimplementedError();
 
   @override
   OutlinedButtonTheme get outlinedButtonTheme => throw UnimplementedError();
