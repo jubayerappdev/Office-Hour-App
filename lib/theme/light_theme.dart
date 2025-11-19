@@ -33,12 +33,28 @@ class LightTheme extends AppTheme {
       foregroundColor: colors.surface900,
       titleTextStyle: TextStyles.labelMedium,
     ),
+    filledButtonTheme: filledButtonThemeData,
   );
-  @override
-  FilledButtonTheme get filledButtonTheme => throw UnimplementedError();
 
   @override
-  OutlinedButtonTheme get outlinedButtonTheme => throw UnimplementedError();
+
+  FilledButtonThemeData get filledButtonThemeData => FilledButtonThemeData(
+    style: FilledButton.styleFrom(
+      backgroundColor: colors.primary,
+          padding: const EdgeInsets.all(16),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
+      textStyle: TextStyles.titleLarge,
+      foregroundColor: colors.buttonTextColor,
+      disabledBackgroundColor: colors.surface100,
+    ),
+  );
+
+  @override
+
+  OutlinedButtonThemeData get outlinedButtonThemeData => throw UnimplementedError();
+
 }
 
 class LightColors extends AppColors {
@@ -122,4 +138,9 @@ class LightColors extends AppColors {
 
   @override
   Color get background => Colors.white;
+
+  @override
+
+  Color get buttonTextColor => Colors.white;
+
 }

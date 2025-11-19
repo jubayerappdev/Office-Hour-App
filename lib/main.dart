@@ -18,8 +18,31 @@ class MyApp extends StatelessWidget {
           title: const Text("Counter"),
           centerTitle: true,
         ),
-        body: const Center(
-          child: Text("Hello Flutter!"),
+        backgroundColor: Colors.black,
+        body: Padding(
+          padding: const EdgeInsets.all(8),
+          child: Column(
+            children: [
+              SizedBox(
+                width: double.maxFinite,
+                 child:  FilledButton(
+                     onPressed: () {},
+                     child: Text('Primary Button'),
+                 ),
+              ),
+              const SizedBox(
+                height: 12,
+              ),
+              SizedBox(
+                width: double.maxFinite,
+                child: OutlinedButton(
+                    onPressed: () {},
+                    child: Text('Outlined Button'),
+                ),
+              ),
+
+            ],
+          ),
         ),
       ),
     );
