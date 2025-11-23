@@ -4,15 +4,15 @@ import 'package:my_flutter_app_1/theme/app_theme.dart';
 
 import '../style/custom_outlined_input_border.dart';
 
-class LightTheme extends AppTheme {
+class LightThemeBlue extends AppTheme {
   @override
-  AppColors get colors => LightColors();
+  AppColors get colors => LightColorsBlue();
 
   @override
   TextTheme get textTheme => TextTheme(
-   headlineLarge: TextStyles.headlineLarge,
-   headlineMedium: TextStyles.headlineMedium,
-   headlineSmall: TextStyles.headlineSmall,
+    headlineLarge: TextStyles.headlineLarge,
+    headlineMedium: TextStyles.headlineMedium,
+    headlineSmall: TextStyles.headlineSmall,
     displayLarge: TextStyles.displayLarge,
     displayMedium: TextStyles.displayMedium,
     displaySmall:TextStyles.displaySmall,
@@ -46,7 +46,7 @@ class LightTheme extends AppTheme {
   FilledButtonThemeData get filledButtonThemeData => FilledButtonThemeData(
     style: FilledButton.styleFrom(
       backgroundColor: colors.primary,
-          padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
       ),
@@ -66,16 +66,16 @@ class LightTheme extends AppTheme {
       textStyle: TextStyles.titleLarge,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
-    ),
+      ),
     ).copyWith(
-      side: WidgetStateBorderSide.resolveWith(
-          (states){
+        side: WidgetStateBorderSide.resolveWith(
+              (states){
             if(states.contains(WidgetState.disabled)){
               return BorderSide(color: colors.surface200);
             }
-             return BorderSide(color: colors.primary);
+            return BorderSide(color: colors.primary);
           },
-      )),
+        )),
 
   );
 
@@ -101,42 +101,42 @@ class LightTheme extends AppTheme {
 
 }
 
-class LightColors extends AppColors {
+class LightColorsBlue extends AppColors {
   @override
-  Color get primary => const Color(0xFF12BF52);
+  Color get primary => const Color(0xFF1E88E5);
 
   @override
-  Color get primary2nd => const Color(0xFF22C55E);
+  Color get primary2nd => const Color(0xFF42A5F5);
 
   @override
-  Color get primary3rd => const Color(0xFF4ADE80);
+  Color get primary3rd => const Color(0xFF64B5F6);
 
   @override
-  Color get primary4th => const Color(0xFF86EFAC);
+  Color get primary4th => const Color(0xFF90CAF9);
 
   @override
-  Color get primary5th => const Color(0xFFBBF7D0);
+  Color get primary5th => const Color(0xFFBBDEFB);
 
   @override
-  Color get primary6th => const Color(0xFFDCFCE7);
+  Color get primary6th => const Color(0xFFE3F2FD);
 
   @override
-  Color get secondary => const Color(0xFF03314B);
+  Color get secondary => const Color(0xFF0D47A1);
 
   @override
-  Color get secondary2nd => const Color(0xFF03314B);
+  Color get secondary2nd => const Color(0xFF1976D2);
 
   @override
-  Color get secondary3rd => const Color(0xFF226B8F);
+  Color get secondary3rd => const Color(0xFF2196F3);
 
   @override
-  Color get secondary4th => const Color(0xFF5CA8D3);
+  Color get secondary4th => const Color(0xFF64B5F6);
 
   @override
-  Color get secondary5th => const Color(0xFFBDE7FF);
+  Color get secondary5th => const Color(0xFFBBDEFB);
 
   @override
-  Color get secondary6th => const Color(0xFFF5FBFF);
+  Color get secondary6th => const Color(0xFFE3F2FD);
 
   @override
   Color get success => const Color(0xFF22C55E);
